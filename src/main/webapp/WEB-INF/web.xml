@@ -4,17 +4,21 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
+	<listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>    
+	<!-- Front Controller for all GWT-Spring based servlets -->
+	<servlet>
+		<servlet-name>gwt</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 
-  <!-- Servlets -->
-  <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.vobject.spring.gwt.server.GreetingServiceImpl</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/gwtmodule/greet</url-pattern>
-  </servlet-mapping>
+	<!-- Don't forget to declare a gwt-servlet.xml -->
+	<servlet-mapping>
+		<servlet-name>gwt</servlet-name>
+		<url-pattern>gwtmodule/rpc/*</url-pattern>
+	</servlet-mapping>
 
   <!-- Default page to serve -->
   <welcome-file-list>
