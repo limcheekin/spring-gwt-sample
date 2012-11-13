@@ -3,4 +3,5 @@
 .project
 .settings
 *.log
-/src/main/webapp
+/src/main/webapp/WEB-INF/classes
+/src/main/webapp/WEB-INF/lib
