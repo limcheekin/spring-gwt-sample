@@ -18,6 +18,10 @@
     
     <gwt-sl.version>1.3-RC1</gwt-sl.version>
     
+    <gwtp.version>0.7</gwtp.version>
+    <guice.version>3.0</guice.version>
+    <gin.version>1.5.0</gin.version>
+    
     <spring.core.version>3.1.0.RELEASE</spring.core.version>
     <cglib.version>2.2</cglib.version>
     <aspectj.version>1.6.10</aspectj.version>
@@ -66,6 +70,34 @@
       <artifactId>gwt-sl</artifactId> 
       <version>${gwt-sl.version}</version> 
     </dependency>
+    
+    <!--GWT Platform-->
+    <dependency>
+      <groupId>com.gwtplatform</groupId>
+      <artifactId>gwtp-all</artifactId>
+      <version>${gwtp.version}</version>
+    </dependency>
+     <dependency>
+         <groupId>com.google.inject</groupId>
+         <artifactId>guice</artifactId>
+         <version>${guice.version}</version>
+     </dependency>
+     <dependency>
+         <groupId>com.google.inject.extensions</groupId>
+         <artifactId>guice-servlet</artifactId>
+         <version>${guice.version}</version>
+     </dependency>
+     <dependency>
+         <groupId>com.google.inject.extensions</groupId>
+         <artifactId>guice-assistedinject</artifactId>
+         <version>${guice.version}</version>
+     </dependency>   
+     <dependency>
+       <groupId>com.google.gwt.inject</groupId>
+       <artifactId>gin</artifactId>
+       <version>${gin.version}</version>
+       <scope>provided</scope> <!-- Not needed server-side -->	
+     </dependency> 
 	
     <!-- Spring Core -->
     <dependency>
